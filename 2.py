@@ -51,11 +51,7 @@ for i in range(x):
     for i in range(x):
         print(i)
     x=3
-    
+
 a = ['apple','lemon','orange','cherry']
 for val in a:
     print(val,len(val))
-
-
-
-

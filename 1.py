@@ -37,5 +37,4 @@ elif (x<y):
     small=x
     if(x>z):
         small=z
-print(small)
-"가장 작은 값은 "+str(small)+" 입니다."
+print("가장 작은 값은 "+str(small)+" 입니다.")
