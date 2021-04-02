@@ -1,7 +1,7 @@
 #구구단
 for i in range(1,10):
     for j in range(1,10):
-        print(str(i)+'x'+str(j)+' =',i*j)
+        print(i,'x',j,'=',i*j)
 
 #임의의 정수가 주어지면 순차탐색을 이용하여 오차범위 0.01이내의 제곱근을 구하시오.
 #순차탐색을 수행할 때마다 관련 변수들의 상태를 프린트 하시오.
@@ -21,11 +21,11 @@ else:
 #이진탐색을 수행할 때마다 관련 변수들의 상태를 프린트하시오
 x=int(input('Input number: '))
 epsilon=0.01
-low=0.0
+low=0
 high=max(1.0,x)
 x_spart=(low+high)/2.0
 while abs(x_spart**2-x)>=epsilon:
-    print('low =',low,'high =',high,'x_spart =',x_spart)
+    print('low =',str(low)+',','high =',str(high)+',','x_spart =',x_spart)
     if x_spart**2<x:
         low=x_spart
     else:
