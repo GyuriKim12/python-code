@@ -49,6 +49,7 @@ while x%11!=0 or x%12!=0:
 print(x,'is divisible by 11 and 12')
 
 #사용자가 입력한 문자열을 모든 문자가 출력될 때까지 한 글자씩 출력하는 프로그램을 만드시오.
+##1
 korean_str=input('문자열을 입력하시오 : ')
 str_len=len(korean_str)
 i=0
@@ -57,9 +58,18 @@ while str_len>0:
     i+=1
     str_len-=1
 
+##2
 korean_str=input('문자열을 입력하시오 : ')
 for val in korean_str:
     print(val)
+
+##3
+korean_str=input('문자열을 입력하시오 : ')
+str_len=len(korean_str)
+i=0
+while i<str_len:
+    print(korean_str[i:i+1])
+    i+=1
 
 #프로그램 사용자로부터 임의의 문자열을 입력 받고, 입력 받은 문자열의 길이를 출력하시오.
 #또한, 입력 받은 문자열 중 영문 소문자의 개수를 세어 출력하시오.
@@ -72,6 +82,7 @@ count=0
 while i<length:
     if str_[i]>='a' and str_[i]<='z':
         count+=1
+    i+=1
 print('The number of lower letters are:',count)
 
 ##2
@@ -82,6 +93,7 @@ count=0
 for i in range(len(str_)):
     if str_[i].islower()==True:
         count+=1
+    i+=1
 print('The number of lower letters are:',count)
 
 ##3
