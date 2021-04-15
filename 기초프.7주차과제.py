@@ -11,7 +11,7 @@ while True:
     if s in '0123456789':
         numbers.append(int(s))
     else:
-        print('다시 입력하시오')
+        print('다시 입력하세요')
 
 def my_max():
     i=0
