@@ -1,17 +1,26 @@
 numbers=list()
 count=0
 while True:
-    s=input('양정수를 입력하세요: ')
-    if count==0 and int(s)<0:
-        print('입력된 양정수가 없습니다.')
+    s=input("양정수를 입력하세요: ")
+    if count==0 and s[0]=='-':
+        print("입력된 양정수가 없습니다.")
         break
     count+=1
-    if '-'in s:
-        break
-    if s in '0123456789':
-        numbers.append(int(s))
+    if s[0]=="-":
+        break    
     else:
-        print('다시 입력하시오')
+        for c in s:
+            if c in "0123456789":
+                if '.' in s[1:]:
+                    ans=False
+                    break
+                ans=True
+            else:
+                ans=False
+        if ans==True:
+            numbers.append(int(s))
+        else:
+            print("다시 입력하세요")
         
 def my_max():
     while True:
