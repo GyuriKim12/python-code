@@ -18,22 +18,28 @@ def my_max():
         if len(numbers)==0:
             pass
         else:
-            for i in range(1,len(numbers)):
-                a=numbers[0]
+            i=0
+            a=numbers[0]
+            while i<len(numbers):
                 if a<numbers[i]:
                     a=numbers[i]
-                    return a
+                i+=1
+            return a
+print('최대값은',my_max())
 
 def my_min():
     while True:
         if len(numbers)==0:
             pass
         else:
-            for i in range(1,len(numbers)):
-                a=numbers[0]
+            i=0
+            a=numbers[0]
+            while i<len(numbers):
                 if a>numbers[i]:
                     a=numbers[i]
-                    return a
+                i+=1
+            return a
+print('최소값은',my_min())
 
 def my_sum():
     while True:
@@ -45,7 +51,8 @@ def my_sum():
             while i<len(numbers):
                 sum+=numbers[i]
                 i+=1
-                return sum
+            return sum
+print('합은',my_sum())
 
 def my_avg():
     while True:
@@ -59,8 +66,4 @@ def my_avg():
                 i+=1
             result=sum/len(numbers)
             return result
-
-print('최대값은',my_max())
-print('최소값은',my_min())
-print('합은',my_sum())
 print('평균은',my_avg())
