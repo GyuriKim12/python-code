@@ -21,20 +21,13 @@ a,b = input('숫자 2개를 입력하세요: ').split() #공백을 기준으로 
 print(a)
 print(b)
 
-a = 'apple, banna, karrot'.split(,) 
-b,c,d = a.split(',') #콤마를 기준으로 할당
-print(b)
-print(c)
-print(d)
 
-x,y,z = map(int(input("숫자 3개를 입력하세요: ")).split())
-small = 0
-if (x>y):
-    small=y
-    if(y>z):
-        small=z
-elif (x<y):
-    small=x
-    if(x>z):
-        small=z
-print("가장 작은 값은 "+str(small)+" 입니다.")
+sum,num=0,1
+i=0
+while i<10:
+    i+=1
+    n=int(input())
+    while n==1:
+        if n==1:
+            sum+=num
+print(sum)
