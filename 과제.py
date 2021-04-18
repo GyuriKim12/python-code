@@ -1,37 +1,33 @@
 numbers=list()
-count=0
-while True:
-    s=input("양정수를 입력하세요: ")
-    for c in s:
-        if c in '0123456789':
-            if '.' in s[1:]:
-                ans=False
+def isInt():
+    count=0
+    for i in s:
+        count+=1
+        if i in "0123456789":
+            result='positive'
+        elif '-' in x:
+            if '0123456789' in s[1:] and count==0:
                 break
-            if s[:] in '0123456789':
-                ans=True
-        elif s[0]=='-':
-            if s[1:] in '0123456789':
-                if count==0:
-                    ans='wrong1'
-                    break
-                else:
-                    ans='wrong'
-                    break
+            elif '0123456789' in s[1:] and count!=0:
+                result='negative' 
             else:
-                ans=False
-            
+                result='wrong'
         else:
-            ans=False
-    if ans==True:
-        numbers.append(int(s))
-    elif ans==False:
-        print('다시 입력해주세요')
-    elif ans=='wrong1':
-        print('입력된 양정수가 없습니다')
-        break
-    else:
-        break
-    count+=1
+            result='wrong'
+    return result   
+    
+def InputInt():
+    while (True):
+        s=input("양정수를 입력하시오: ")
+        result=isInt(s)
+        if result=='positive':
+            numbers.append(int())
+        elif result=='negative':
+            break
+        else:
+            print('잘못 입력하였습니다. 다시입력하십시오')
+InputInt()
+
 def my_max():
     while True:
         if len(numbers)==0:
