@@ -122,13 +122,13 @@ else:
     print(x,'is divisible not by 2 and 3')
 
 #n팩토리얼 
-def fact():
-    n=int(input())
+def fact(n):
     if n==1:
         return 1
     else:
         return n*fact(n-1)
-fact()
+n=int(input())
+fact(n)
 
 #n에 대한 피보나치수열
 def fib(x):
