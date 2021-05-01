@@ -38,13 +38,15 @@ while count>0:
     x=input('숫자를 입력해 주세요: ')
     numbers.append(int(x))
     count-=1
-    
-def merge(List1):
+
+List=[]   
+def merge(List):
     i=0
     while i<len(Tuple):
-        numbers.append(int(Tuple[i]))
+        List.append(int(Tuple[i]))
         i+=1
-    return numbers
+    List+=numbers
+    return List
 
 def listSort(x):
     for i in range(len(x)):
@@ -58,8 +60,8 @@ def listSort(x):
     return x
 
 x=listSort(numbers)
-print('tupel과 list를 합친 결과',listSort(merge(numbers)))  
-print('내 list 정렬 값',listSort(x)) 
+print('tupel과 list를 합친 결과',listSort(merge(List)))  
+print('내 list 정렬 값',listSort(x))
 
 #method2
 Tuple=(10,20,30,40)
