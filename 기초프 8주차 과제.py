@@ -30,7 +30,7 @@ while i<len(numbers):
     i+=1
 print('가장 낮은 점수는',a,'입니다.')
 
-#2
+#2번 method1
 Tuple=(10,20,30,40)
 count=5
 numbers=[]
@@ -38,16 +38,13 @@ while count>0:
     x=input('숫자를 입력해 주세요: ')
     numbers.append(int(x))
     count-=1
-List=[]
-i=0
-List1=[]
+    
 def merge(List1):
     i=0
     while i<len(Tuple):
-        List.append(int(Tuple[i]))
+        numbers.append(int(Tuple[i]))
         i+=1
-    List1=List+numbers
-    return List1
+    return numbers
 
 def listSort(x):
     for i in range(len(x)):
@@ -59,6 +56,35 @@ def listSort(x):
                 x[j-1]=x[j]
                 x[j]=temp
     return x
+
 x=listSort(numbers)
-print('tupel과 list를 합친 결과',listSort(merge(List1)))  
+print('tupel과 list를 합친 결과',listSort(merge(numbers)))  
 print('내 list 정렬 값',listSort(x)) 
+
+#method2
+Tuple=(10,20,30,40)
+count=5
+numbers=[]
+while count>0:
+    x=input('숫자를 입력해 주세요: ')
+    numbers.append(int(x))
+    count-=1
+
+def merge():
+    add=numbers[:]
+    for i in Tuple:
+        add.append(i)
+    return add
+merge()
+
+def listSort(x):
+    for i in range(1,len(x)):
+        j=i
+        while j>0 and x[j-1]>x[j]:
+            x[j-1],x[j]=x[j],x[j-1]
+            j-=1   
+    return x
+
+x=listSort(numbers)
+print('tupel과 list를 합친 결과',listSort(merge()))  
+print('내 list 정렬 값',listSort(x))
