@@ -72,20 +72,16 @@ isOperator(List)
 
 #2번
 def getDiscriminant(a, b, c):
-    if b%2==0:
-        return ((b/2) ** 2) - (a*c)
-    else:
-        return (b ** 2) - (4*a*c)
+    return (b ** 2) - (4 * a * c)
 
 def getQuadraticFormula(a, b, c):
     QF = None
-    D=0
+    D = 0
     if a == 0:
         if b == 0:
             # Answer is infinity
             if c == 0:
                 QF = True
-
             # Answer is none
             else:
                 QF = False
@@ -96,31 +92,24 @@ def getQuadraticFormula(a, b, c):
 
     else:
         D = getDiscriminant(a, b, c)
-
-    # Answer are two real root
-    if a!=0 and b!=0:
+        
+        # Answer are two real root
         if D > 0:
-            if b%2==0:
-                QF = (
-                    (-b/2 + D ** 0.5) / (a),
-                    (-b/2 - D ** 0.5) / (a))
-            else:
-                QF = (
-                    (-b + D ** 0.5) / (2 * a),
-                    (-b - D ** 0.5) / (2 * a))
+            QF = (
+                (-b + D ** 0.5) / (2 * a),
+                (-b - D ** 0.5) / (2 * a))
 
-    # Answer are two imaginary root
+        # Answer are two imaginary root
         elif D < 0:
             QF = (
                 complex((-b) / (2 * a), (-D) ** 0.5 / (2 * a)),
                 complex((-b) / (2 * a), - ((-D) ** 0.5) / (2 * a)))
 
-    # Answer is multiple root
+        # Answer is multiple root
         else:
             QF = (-b) / (2 * a)
 
     return QF
-
 print("Calculate QF(Quadratic Formula) for PSE(Perfect Square Expression)")
 print("ex) ax^2 + bx + c = 0")
 
@@ -137,7 +126,7 @@ if QF == True:
 elif QF == False:
     print("None.")
 
-elif isinstance(QF, tuple):
+elif isinstance(QF, tuple): 
     for answer in QF:
         print("{:.2f}".format(answer))
 
