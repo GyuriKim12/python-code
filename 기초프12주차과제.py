@@ -11,7 +11,7 @@ def getAverage(vect):
     try:
         avg/=len(vect)
     except:
-        raise AssertionEroor
+        raise AssertionError
     return avg
 try:
     lst=[100, 20, 43, 57, 12, 66, 77,'aaa']
@@ -34,7 +34,7 @@ def getAverage(vect):
     try:
         avg/=len(vect)
     except:
-        raise AssertionEroor
+        raise AssertionError
     return avg
 try:
     lst=[100, 20, 43, 57, 12, 66, 77]
@@ -57,7 +57,7 @@ def getAverage(vect):
     try:
         avg/=len(vect)
     except:
-        raise AssertionEroor
+        raise AssertionError
     return avg
 try:
     lst=[]
